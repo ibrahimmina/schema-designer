@@ -235,32 +235,112 @@ class ColumnModal extends Component<Props, State> {
                                     defaultValue={ columnType }
                                     onChange={ this.updateColumnType }
                                 >
-                                    <option value='integer'>INT</option>
-                                    <option value='string'>VARCHAR</option>
-                                    <option value='text'>TEXT</option>
-                                    <option value='date'>DATE</option>
-                                    <optgroup label='Numeric'>
-                                        <option value='tinyInteger'>TINYINT</option>
-                                        <option value='smallInteger'>SMALLINT</option>
-                                        <option value='mediumInteger'>MEDIUMINT</option>
-                                        <option value='bigInteger'>BIGINT</option>
-                                        <option value='boolean'>BOOLEAN</option>
-                                        <option disabled='disabled'>-</option>
-                                        <option value='decimal'>DECIMAL</option>
-                                        <option value='float'>FLOAT</option>
-                                        <option value='double'>DOUBLE</option>
-                                    </optgroup>
-                                    <optgroup label='Date and time'>
-                                        <option value='dateTime'>DATETIME</option>
-                                        <option value='timestamp'>TIMESTAMP</option>
-                                        <option value='time'>TIME</option>
-                                    </optgroup>
-                                    <optgroup label='String'>
-                                        <option value='char'>CHAR</option>
-                                        <option value='tinyText'>TINYTEXT</option>
-                                        <option value='mediumText'>MEDIUMTEXT</option>
-                                        <option value='longText'>LONGTEXT</option>
-                                    </optgroup>
+                                  <optgroup label="Integer">
+                                    <option value="bigInteger">BIGINT</option>
+                                    <option value="integer">INTEGER</option>
+                                    <option value="mediumInteger">MEDIUMINT</option>
+                                    <option value="smallInteger">SMALLINT</option>
+                                    <option value="tinyInteger">TINYINT</option>
+                                  </optgroup>
+                                  <optgroup label="Numeric">
+                                    <option value="decimal">DECIMAL</option>
+                                    <option value="double">DOUBLE</option>
+                                    <option value="float">FLOAT</option>
+                                  </optgroup>
+                                  <optgroup label="AlphaNumeric">
+                                    <option value="char">CHAR</option>
+                                    <option value="string">VARCHAR</option>
+                                    <option value="longText">LONGTEXT</option>
+                                    <option value="mediumText">MEDIUMTEXT</option>
+                                    <option value="multiLineString">MULTILINESTRING</option>
+                                    <option value="lineString">LINESTRING</option>
+                                    <option value="text">TEXT</option>
+                                  </optgroup>
+                                  <optgroup label="Date and time">
+                                    <option value="dateTime">DATETIME</option>
+                                    <option value="dateTime">DATETIME LOCAL</option>
+                                    <option value="date">DATE</option>
+                                    <option value="timestamp">TIMESTAMP</option>
+                                    <option value="timestamp">TIMESTAMP LOCAL</option>
+                                    <option value="time">TIME</option>
+                                    <option value="time">TIME LOCAL</option>
+                                    <option value="year">YEAR</option>
+                                    <option value="year">MONTH</option>
+                                  </optgroup>
+
+                                  <optgroup label="Address">
+                                    <option value="string">ADDRESS</option>
+                                    <option value="integer">TELEPHONE</option>
+                                    <option value="string">ZIP</option>
+                                    <option value="string">CITY</option>
+                                    <option value="string">COUNTRY</option>
+                                  </optgroup>
+
+                                  <optgroup label="Authentication">
+                                    <option value="string">EMAIL</option>
+                                    <option value="string">PASSWORD</option>
+                                    <option value="rememberToken">rememberToken</option>
+                                  </optgroup>
+
+                                  <optgroup label="Misc">
+                                    <option value="macAddress">MAC</option>
+                                    <option value="string">FILE</option>
+                                    <option value="string">IMAGE</option>
+                                    <option value="ip">IP</option>
+                                    <option value="boolean">BOOLEAN</option>
+                                    <option value="uuid">UUID</option>
+                                  </optgroup>
+
+                                  <optgroup label="Collection">
+                                    <option value="binary" disabled>
+                                      BLOB
+                                    </option>
+                                    <option value="enum" disabled>
+                                      ENUM
+                                    </option>
+                                    <option value="json" disabled>
+                                      JSON 
+                                    </option>
+                                    <option value="jsonb" disabled>
+                                      JSONB
+                                    </option>
+                                    <option value="set" disabled>
+                                      SET
+                                    </option>
+                                  </optgroup>
+
+                                  <optgroup label="Morphs">
+                                    <option value="nullableMorphs" disabled>
+                                      morphs
+                                    </option>
+                                    <option value="nullableUuidMorphs" disabled>
+                                      uuidMorphs
+                                    </option>
+                                    <option value="nullableUuidMorphs" disabled>
+                                      uuidMorphs
+                                    </option>
+                                  </optgroup>
+
+                                  <optgroup label="Geometry">
+                                    <option value="geometryCollection" disabled>
+                                      GEOMETRYCOLLECTION
+                                    </option>
+                                    <option value="geometry" disabled>
+                                      GEOMETRY
+                                    </option>
+                                    <option value="multiPoint" disabled>
+                                      MULTIPOINT
+                                    </option>
+                                    <option value="multiPolygon" disabled>
+                                      MULTIPOLYGON
+                                    </option>
+                                    <option value="point" disabled>
+                                      POINT
+                                    </option>
+                                    <option value="polygon" disabled>
+                                      POLYGON
+                                    </option>
+                                  </optgroup>                                       
                                 </select>
                             </div>
                         </div>
